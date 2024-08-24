@@ -22,8 +22,8 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 ### 1. Clone o repositório
 
 ```bash
-git clone <URL-DO-SEU-REPOSITORIO>
-cd <NOME-DO-DIRETÓRIO-DO-PROJETO>
+git clone https://github.com/guirab/Zaply
+cd zaply
 ```
 
 ### 2. Instale as dependências
