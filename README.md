@@ -51,5 +51,7 @@ yarn start
 ## Tecnologias Utilizadas
 - **React:** Biblioteca JavaScript para construção de interfaces de usuário.
 - **TypeScript:** Superset de JavaScript que adiciona tipagem estática ao código.
+- **Tailwind CSS:** Framework CSS para estilização de componentes.
 - **Yarn:** Gerenciador de pacotes para JavaScript.
 - **Node.js:** Ambiente de execução JavaScript server-side.
+- **Express:** Framework web para Node.js.
