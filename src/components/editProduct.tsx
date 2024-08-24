@@ -118,8 +118,12 @@ const EditProductForm: React.FC<EditProductFormProps> = ({
           className="w-full border border-gray-300 rounded-lg p-2"
         />
       </div>
-      <div className="flex justify-between">
-        {product && (
+      <div
+        className={`flex ${
+          product && product.id !== 0 ? "justify-between" : ""
+        }`}
+      >
+        {product && product.id !== 0 && (
           <button
             type="button"
             onClick={() => onRemove(product.id)}
@@ -128,7 +132,11 @@ const EditProductForm: React.FC<EditProductFormProps> = ({
             Remover
           </button>
         )}
-        <div className="flex space-x-2">
+        <div
+          className={`flex ${
+            product && product.id !== 0 ? "space-x-2" : "justify-between w-full"
+          }`}
+        >
           <button
             type="button"
             onClick={onCancel}
@@ -140,7 +148,7 @@ const EditProductForm: React.FC<EditProductFormProps> = ({
             type="submit"
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
           >
-            {product ? "Salvar" : "Adicionar"}
+            Salvar
           </button>
         </div>
       </div>
