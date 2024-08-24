@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 interface Product {
   id: number;
@@ -15,8 +15,8 @@ interface ProductTableProps {
 }
 
 const ProductTable: React.FC<ProductTableProps> = ({ products, onEdit }) => {
-  const [sortField, setSortField] = useState<string>(""); // Campo de ordenação
-  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc"); // Direção da ordenação
+  const [sortField, setSortField] = useState<string>("");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
   const handleSort = (field: string) => {
     setSortField(field);

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import ProductTable from "./components/productTable";
 import EditProductForm from "./components/editProduct";
 import Modal from "./components/modal";
@@ -55,7 +56,6 @@ const App: React.FC = () => {
   const handleSave = async (product: Product) => {
     try {
       if (product.id === 0) {
-        // Novo produto (adicionando)
         const response = await fetch("http://localhost:3001/api/products", {
           method: "POST",
           headers: {
@@ -72,7 +72,6 @@ const App: React.FC = () => {
         setAllProducts([...allProducts, newProduct]);
         setProducts([...allProducts, newProduct]);
       } else {
-        // Produto existente (editando)
         const response = await fetch(
           `http://localhost:3001/api/products/${product.id}`,
           {
